@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TrapScale – AI Brand Scaling, No Cap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Scale your freelance brand the trap way—AI agents instead of payroll, streetwise automations, and hustle that never sleeps. No cap.">
+  <!-- Google Fonts: Sora + Nunito -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    :root {
+      --bg: #141212;
+      --panel: #1a1818;
+      --accent: #bfa76a;
+      --accent2: #3c3124;
+      --text: #e9e5dc;
+      --title: #e0c26c;
+      --btn-bg: #23201a;
+      --btn-txt: #e9e5dc;
+      --btn-hover: #bfa76a;
+      --border: #352d1c;
+      --partner: #d1ad5d;
+      --partner-hover: #8b7528;
+      --shadow: #000a;
+    }
+    body {
+      background: var(--bg);
+      font-family: 'Nunito', Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
+    }
+    header {
+      background: var(--panel);
+      padding: 28px 0 16px 0;
+      border-bottom: 2px solid var(--accent);
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Sora', 'Nunito', Arial, sans-serif;
+      font-weight: 700;
+      color: var(--title);
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 12px var(--shadow);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .seo-copy {
+      max-width: 920px;
+      margin: 42px auto 24px auto;
+      background: var(--panel);
+      border-radius: 16px;
+      border: 1.5px solid var(--border);
+      box-shadow: 0 4px 24px var(--shadow);
+      padding: 30px 32px;
+      font-size: 1.15rem;
+      color: #cab27b;
+      line-height: 1.75;
+      text-align: center;
+      letter-spacing: 0.01em;
+      font-weight: 600;
+    }
+    nav {
+      margin: 0;
+      padding: 0;
+      background: #191716;
+      border-bottom: 2px solid var(--accent2);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0 18px;
+    }
+    nav a {
+      display: block;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 13px 8px;
+      font-weight: 700;
+      font-size: 1.08rem;
+      border-radius: 12px;
+      transition: color 0.17s, background 0.18s;
+    }
+    nav a:hover, nav a.active {
+      color: #fff;
+      background: var(--accent2);
+      text-shadow: 0 1px 6px var(--shadow);
+    }
+    .gallery-container {
+      max-width: 1200px;
+      margin: 38px auto 16px auto;
+      padding: 0 12px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 26px;
+    }
+    .gallery-card {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 3px 16px var(--shadow);
+      overflow: hidden;
+      transition: transform 0.23s, box-shadow 0.22s;
+      position: relative;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 360px;
+    }
+    .gallery-card:hover {
+      transform: translateY(-6px) scale(1.025);
+      box-shadow: 0 7px 36px #000c;
+      border-color: var(--accent);
+    }
+    .gallery-card img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid var(--accent);
+      min-height: 180px;
+      max-height: 260px;
+      filter: brightness(0.93) saturate(0.82) contrast(1.09);
+    }
+    .gallery-title {
+      font-family: 'Sora', 'Nunito', Arial, sans-serif;
+      color: var(--title);
+      font-size: 1.18rem;
+      margin: 14px 0 0 0;
+      padding: 0 9px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+    }
+    .gallery-btn {
+      display: block;
+      background: var(--btn-bg);
+      color: var(--btn-txt);
+      font-weight: bold;
+      border-radius: 21px;
+      padding: 9px 22px;
+      margin: 40px auto;
+      text-decoration: none;
+      transition: background 0.21s, color 0.18s;
+      font-size: 1.07rem;
+      border: 1.5px solid var(--accent2);
+      letter-spacing: 0.01em;
+      box-shadow: 0 1px 7px #0003;
+    }
+    .gallery-btn:hover {
+      background: var(--btn-hover);
+      color: #221b14;
+      border-color: var(--btn-hover);
+    }
+    .partner-links {
+      margin: 15px 0 7px 0;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 1.07rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      line-height: 1.35;
+    }
+    .partner-links a {
+      color: var(--partner);
+      text-decoration: underline;
+      margin: 0 7px;
+      transition: color 0.14s, text-decoration 0.15s;
+      word-break: break-word;
+    }
+    .partner-links a:hover {
+      color: var(--partner-hover);
+      text-decoration: underline wavy;
+      background: #252016;
+      border-radius: 7px;
+      padding: 5px 0;
+    }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin: 40px 0 22px 0;
+      font-size: 1.13rem;
+      flex-wrap: wrap;
+    }
+    .pagination a, .pagination .current {
+      color: var(--accent);
+      background: #191716;
+      border-radius: 14px;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: 700;
+      min-width: 38px;
+      text-align: center;
+      border: 2px solid var(--accent2);
+      box-sizing: border-box;
+      transition: background 0.16s, color 0.15s, border 0.15s;
+    }
+    .pagination a:hover {
+      background: var(--accent2);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .pagination .current {
+      background: var(--accent);
+      color: #1a1818;
+      border-color: var(--accent);
+      box-shadow: 0 2px 8px #bfa76a2d;
+      cursor: default;
+    }
+
+.trap-hero-video-box {
+  max-width: 820px;
+  margin: 46px auto 38px auto;
+  position: relative;
+  z-index: 2;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 8px 44px #000c, 0 2px 18px #bfa76a22;
+  background: linear-gradient(120deg, #1a1818 70%, #3c3124 100%);
+}
+
+.trap-hero-video-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.trap-hero-video {
+  width: 100%;
+  min-height: 270px;
+  background: #191716;
+  border: none;
+  border-radius: 0;
+  display: block;
+  filter: brightness(0.93) saturate(0.93) contrast(1.08);
+}
+
+.trap-hero-video-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background: linear-gradient(to top, rgba(26, 24, 24, 0.83) 75%, rgba(26, 24, 24, 0.02) 100%);
+  pointer-events: none;
+  padding: 0 0 36px 38px;
+}
+
+.trap-hero-video-headline {
+  color: #bfa76a;
+  font-family: 'Sora', Arial, sans-serif;
+  font-size: 2.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-shadow: 0 3px 20px #000b;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.trap-hero-video-headline i {
+  font-size: 2.2rem;
+  margin-right: 13px;
+  color: #e0c26c;
+  text-shadow: 0 1px 7px #0008;
+}
+
+.trap-hero-video-subline {
+  color: #cab27b;
+  font-size: 1.13rem;
+  font-weight: 600;
+  text-shadow: 0 1px 8px #0007;
+  margin-bottom: 4px;
+  max-width: 88%;
+}
+
+.trap-highlight {
+  color: #fff;
+  background: #3c3124;
+  border-radius: 8px;
+  padding: 1.5px 8px;
+  margin-left: 5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.trap-unmute-btn {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: linear-gradient(90deg, #bfa76a 60%, #3c3124 100%);
+  color: #181614;
+  border: none;
+  border-radius: 18px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: 17px 38px;
+  cursor: pointer;
+  box-shadow: 0 5px 32px #000a;
+  opacity: 0.93;
+  transition: opacity 0.27s, background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trap-unmute-btn:hover {
+  opacity: 1;
+  background: linear-gradient(90deg, #d1ad5d 70%, #bfa76a 100%);
+}
+
+.trap-unmute-btn.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.27s;
+}
+
+@media (max-width: 600px) {
+  .trap-hero-video-box { max-width: 99vw; margin: 19px 0; border-radius: 13px; }
+  .trap-hero-video-overlay { padding: 0 0 13px 10px; }
+  .trap-hero-video-headline { font-size: 1.12rem; }
+  .trap-hero-video-subline { font-size: 0.97rem; }
+  .trap-unmute-btn { font-size: 1rem; padding: 11px 20px; border-radius: 11px; }
+}
+
+
+.trap-highlight {
+  color: #fff;
+  background: #3c3124;
+  border-radius: 8px;
+  padding: 1.5px 8px;
+  margin-left: 5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.trap-hero-video-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.trap-receipts-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  background: linear-gradient(90deg, #1a1818 70%, #272118 100%);
+  border: 2px solid #bfa76a;
+  border-radius: 18px;
+  box-shadow: 0 3px 18px #000a;
+  margin: 32px auto 0 auto;
+  padding: 18px 36px 14px 36px;
+  max-width: 1200px;
+  font-family: 'Sora', 'Nunito', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.13rem;
+  color: #ffe7a6;
+  letter-spacing: 0.03em;
+  text-shadow: 0 2px 8px #0009;
+  overflow-x: auto;
+}
+
+.trap-receipts-bar span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: rgba(191, 167, 106, 0.12);
+  padding: 5px 18px 5px 12px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px #bfa76a30;
+  white-space: nowrap;
+  transition: background 0.17s;
+}
+
+.trap-receipts-bar span:hover {
+  background: rgba(191, 167, 106, 0.29);
+  color: #fff5cc;
+}
+@media (max-width: 700px) {
+  .trap-receipts-bar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 15px 9px 9px 9px;
+    font-size: 0.99rem;
+  }
+  .trap-receipts-bar span { width: 100%; justify-content: center; }
+}
+
+
+
+@media (max-width: 600px) {
+  .trap-hero-video-box { max-width: 99vw; margin: 19px 0; border-radius: 13px; }
+  .trap-hero-video-overlay { padding: 0 0 13px 10px; }
+  .trap-hero-video-headline { font-size: 1.12rem; }
+  .trap-hero-video-subline { font-size: 0.97rem; }
+}
+
+    footer {
+      background: var(--panel);
+      color: #c3ad8a;
+      padding: 18px 0 10px 0;
+      font-size: 1.01rem;
+      text-align: center;
+      margin-top: 32px;
+      border-top: 2px solid var(--accent);
+      letter-spacing: 0.03em;
+    }
+    @media (max-width: 700px) {
+      .gallery-title { font-size: 1.07rem; }
+      nav ul { flex-direction: column; }
+      nav li { margin: 0 0 3px 0; }
+      .gallery-btn { font-size: 0.97rem; }
+      .gallery-container { padding: 0 2px; }
+      .seo-copy { padding: 13px 4px; font-size: 1.04rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+      <i class="fa-solid fa-sack-dollar"></i> AI Trapping
+    </h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#" class="active"><i class="fa-solid fa-robot"></i> AI Brand Scaling</a></li>
+      <li><a href="#"><i class="fa-solid fa-user-secret"></i> AI Automation</a></li>
+      <li><a href="#"><i class="fa-solid fa-book-open-reader"></i> AI Playbook</a></li>
+      <li><a href="#"><i class="fa-solid fa-handshake"></i> Brand Scaling Partners</a></li>
+      <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+    </ul>
+  </nav>
+
+<div class="trap-hero-video-box">
+  <div class="trap-hero-video-inner">
+    <video id="trapHeroVideo"
+      class="trap-hero-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      poster="">
+      <source src="aitrapping.mp4" type="video/mp4">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+    <div class="trap-hero-video-overlay" id="trapHeroOverlay">
+      <div class="trap-hero-video-headline">
+        <i class="fa-solid fa-user-secret"></i> <span>Welcome to TrapScale</span>
+      </div>
+      <div class="trap-hero-video-subline">
+        The only brand scaling agency run by real AI agents.<br>
+        <span class="trap-highlight">No payroll. No gatekeepers. All hustle.</span>
+      </div>
+    </div>
+    <button id="unmuteBtn" class="trap-unmute-btn">
+      <i class="fa-solid fa-volume-up"></i> Click to Unmute
+    </button>
+  </div>
+</div>
+
+
+<center>
+<a class="trap-gold-btn" href="#" style="display:inline-block;background:linear-gradient(90deg,#bfa76a,#cab27b);color:#23201a;font-weight:800;font-size:1.23rem;padding:17px 38px;border-radius:21px;box-shadow:0 3px 22px #000b;margin:18px 0 7px 0;text-decoration:none;margin-bottom: 20px;">Get the Free AI Brand Scaling Playbook NOW!</a>
+</center>
+
+
+  <div class="seo-copy">
+    <h2 style="color:#81D8D0;">Stop playing small. Trap Scaling flips the agency model on its head.</h2>
+    Out here, hiring agents is played out. Chasing staff, onboarding, chasing invoices? Dead moves. The real ones already switched up: AI agents run the block now. 
+    Imagine stacking a whole agency—lead gen, cold DMs, campaigns, sales, copy, support, scheduling—without ever hiring another “agent.” No payroll, no complaints, no weak links. Just pure digital muscle, coded for hustle and trained to get the bag. 
+    <br><br>
+    TrapScale’s AI agents grind 24/7. They never call in, never slack, never drop a lead. Outreach runs while you sleep. Proposals hit while you’re outside. Campaigns and content? AI runs it, you just watch the numbers stack. 
+    Why mess with flaky hires when you can escape the hiring process and still outscale every “big agency” in the game? Drop the drama. Replace the idea of building an agency with humans and instead use AI agents who only care about one thing: results.
+    AI Agents work 24x7 unlike the old school freelance brand scaling interns who only wanna hang around and enjoy the good life with you.
+    <br><br>
+    This is the new trap. Every piece automated. Every step optimized. Every dollar working for you, not the other way around. TrapScale AI is how you flex on the old heads stuck in yesterday’s game. 
+
+    <span style="color:var(--accent); font-weight:700;">
+      Welcome to the block where your freelance brand stacks up like a syndicate, all built on code. 
+      Stay ghost, stay paid, and let the AI do the dirty work. 
+      Because in this era, only the ones who automate with AI are eating. 
+    </span>
+  </div>
+
+<h2 style="color:#fff;font-family:'Sora',sans-serif;font-size:2.25rem;font-weight:900;text-transform:uppercase;letter-spacing:0.09em;padding:18px 0 13px 0;text-align:center;margin-bottom:22px;">
+  The TrapScale Knowledge Drop
+</h2>
+
+
+  <div class="gallery-container">
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?fit=crop&w=900&q=80" alt="No Human Agents Needed">
+        <div class="gallery-title"><i class="fa-solid fa-user-secret"></i> Fire Your Agents NOW (Get ChatGPT Plus)</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">Let’s keep it 100: If you’re not on ChatGPT Plus, you’re scaling at rookie speed. O3 is cool for ideas, but 4.1 is the real closer. Every big move—code, content, contracts—happens on Plus. Don’t play yourself, upgrade and leave your old crew behind.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Start Scaling</a>
+      </div>      
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=900&q=80" alt="AI Hustle Strategy">
+        <div class="gallery-title"><i class="fa-solid fa-brain"></i> AI Hustle Strategy (GPT-4.5/o3)</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">Use GPT-4.5/o3 to brainstorm, plan, and map out your agency’s next moves—fast. No more writer’s block. Just drop a prompt and the trap strategy flows. Every campaign starts with the vision. Every vision gets sharpened by AI.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Sign Up Here</a>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?fit=crop&w=900&q=80" alt="Code Execution GPT-4.1">
+        <div class="gallery-title"><i class="fa-solid fa-code"></i> Full Stack AI Code (GPT-4.1)</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">Get your automations, landing pages, and growth scripts built in minutes, not weeks. Use GPT-4.1 for real code—web, bots, API hooks, anything. The power move: always have that Plus subscription so you can flex GPT-4.1 when it’s time to execute for real.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Get AI-Built Code</a>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?fit=crop&w=900&q=80" alt="Automated Cold Outreach">
+        <div class="gallery-title"><i class="fa-solid fa-paper-plane"></i> Automated Cold Outreach</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">Let AI agents run the cold DMs, emails, and follow-ups. GPT plans the approach, 4.1 writes the icebreakers, and your inbox fills while you chill. Never hand-type a cold pitch again. Real hustle means automating the intro and getting straight to the bag.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Automate DMs</a>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?fit=crop&w=900&q=80" alt="AI Proposal Generator">
+        <div class="gallery-title"><i class="fa-solid fa-file-signature"></i> AI Proposal Generator</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">GPT-4.1 whips up custom proposals, contracts, SOWs, and decks—tailored for every client, every time. Close more with less sweat. Use Plus, flex your premium token, and never get caught with a mid pitch.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Generate Proposals</a>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1461344577544-4e5dc9487184?fit=crop&w=900&q=80" alt="AI Content Factory">
+        <div class="gallery-title"><i class="fa-solid fa-feather-pointed"></i> AI Content Factory</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">Let your AI crew churn out posts, blogs, emails, and landing pages—real quality, never thin. GPT-4.1 = king content, O3 = fast ideas. Post daily, scale reach, dominate every channel. Human writers just can’t compete.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> See AI Content</a>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?fit=crop&w=900&q=80" alt="Deal Closing AI">
+        <div class="gallery-title"><i class="fa-solid fa-sack-dollar"></i> Deal Closing AI Closer</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">Don’t fumble the close. GPT-4.1 scripts the negotiation, responds live, and lands the contract. Close more, haggle less. You got the Plus? You got the edge.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Book a Demo</a>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?fit=crop&w=900&q=80" alt="Live AI Reporting">
+        <div class="gallery-title"><i class="fa-solid fa-chart-line"></i> Live AI Reporting</div>
+        <div style="padding:12px 16px 0 16px;font-size:0.98rem;color:#c3ad8a;">TrapScale shows you what’s up in real time—new leads, new cash, weak spots, and wins. You move faster when you see the whole board. That’s why we run it through AI. Nothing escapes.</div>
+        <a class="gallery-btn" href="#"><i class="fa-solid fa-arrow-right"></i> Watch in Real Time</a>
+      </div>
+
+    </div>
+
+<div class="trap-receipts-bar">
+  <span>📈 $34k client landed last week</span>
+  <span>🤖 423 cold emails sent today</span>
+  <span>🔥 8 brands scaled to $10k+/mo with AI</span>
+</div>
+
+<h2 style="color:#bfa76a;font-family:'Sora',sans-serif;font-size:2.35rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;text-align:center;">
+  Frequently Asked Questions
+</h2>
+
+
+<section class="trap-faq max-center" style="margin:0 auto 38px auto;padding:32px 30px 30px 30px;background:var(--panel);border-radius:18px;border:2px solid var(--accent2);box-shadow:0 2px 14px #000a;max-width:700px;">
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> Do I need to know code to use TrapScale?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      Nah. You drop your goals, we set the AI in motion. Everything is prompt-driven, street simple. Just say what you want—TrapScale’s agents handle the rest. Real hustle, zero code headaches.
+    </p>
+  </div>
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> Is this just ChatGPT with a new name?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      Not even. TrapScale builds on ChatGPT, but stacks it with agency-only automations, secret sauce prompt flows, and hands-free tools. We trap harder—everything’s tuned for real brand scaling.
+    </p>
+  </div>
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> How fast do I see results?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      Fast. Some see DMs and new leads hit the first night. If you show up, TrapScale moves quick—AI doesn’t sleep, and neither does your pipeline. Don't rush the flow, we'll teach you.
+    </p>
+  </div>
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> What if I already have a team?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      No problem. Let your humans do what only humans can—AI handles the grind. Most clients scale faster by letting agents focus on big moves while TrapScale automates everything else.
+    </p>
+  </div>
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> How much does it cost?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      Way less than hiring, way more than free. We’re here to stack bags, not nickel and dime. Transparent pricing, no long-term contracts, cancel anytime—like a real trapper, keep it moving if it’s not a fit.
+    </p>
+  </div>
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> Is this safe and private?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      100%. No funny business. Your data’s locked up tighter than a trap safe. We never sell, share, or flex your info. Hustle in peace.
+    </p>
+  </div>
+  
+  <div style="margin-bottom:30px;">
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> Can I talk to a real person?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      Always. Hit the “Contact” tab or drop a DM. The TrapScale crew (and our AI agents) are always on.
+    </p>
+  </div>
+
+  <div>
+    <strong style="color:#cab27b;"><i class="fa-solid fa-circle-question"></i> What’s the catch?</strong>
+    <p style="margin:8px 0 0 0;color:#e9e5dc;">
+      There isn’t one. You’re early. The only catch is if you wait, you get left. TrapScale was built for brand hustlers who move first.
+    </p>
+  </div>
+</section>
+
+<center>
+<a class="trap-gold-btn" href="#" style="display:inline-block;background:linear-gradient(90deg,#bfa76a,#cab27b);color:#23201a;font-weight:800;font-size:1.23rem;padding:17px 38px;border-radius:21px;box-shadow:0 3px 22px #000b;margin:18px 0 7px 0;text-decoration:none;margin-bottom: 60px;">Get the Free AI Brand Scaling Playbook NOW!</a>
+</center>
+
+<h2 style="color:#bfa76a;font-family:'Sora',sans-serif;font-size:2.18rem;font-weight:700;text-align:center;letter-spacing:0.03em;border-bottom:2.5px solid #bfa76a;max-width:700px;margin:0 auto 19px auto;padding-bottom:6px;">
+  AI BRAND SCALING RESOURCES
+</h2>
+
+<div class="partner-links">
+  <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">Artificial Intelligence</a> &middot;
+  <a href="https://brandscal.ing" target="_blank">Brand Scaling</a> &middot;
+  <a href="https://freelancebrandscal.ing" target="_blank">Freelance Brand Scaling</a>
+  <a href="https://github.com/resources/articles/ai/what-are-ai-agents" target="_blank">AI Agents</a>
+</div> 
+
+  </div>
+  <footer>
+    <span>© 2025 TrapScale – AI Brand Scaling Agency. <a href="#">DMCA</a> &middot; <a href="#">Partner with Us</a></span>
+  </footer>
+
+<script>
+  const trapHeroVideo = document.getElementById('trapHeroVideo');
+  const unmuteBtn = document.getElementById('unmuteBtn');
+  const trapHeroOverlay = document.getElementById('trapHeroOverlay');
+
+  function checkMuted() {
+    if (trapHeroVideo.muted) {
+      unmuteBtn.classList.remove('hide');
+      trapHeroOverlay.classList.remove('hide');
+    } else {
+      unmuteBtn.classList.add('hide');
+      trapHeroOverlay.classList.add('hide');
+    }
+  }
+
+  unmuteBtn.addEventListener('click', function() {
+    trapHeroVideo.muted = false;
+    trapHeroVideo.volume = 1;
+    unmuteBtn.classList.add('hide');
+    trapHeroOverlay.classList.add('hide');
+    trapHeroVideo.play();
+  });
+
+  trapHeroVideo.addEventListener('volumechange', checkMuted);
+
+  checkMuted();
+</script>
+
+
+</body>
+</html>
